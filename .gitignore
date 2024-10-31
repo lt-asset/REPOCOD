@@ -1,0 +1,7 @@
+downloaded_repos*
+
+tmp*
+
+__pycache__*
+
+*json
