@@ -26,3 +26,17 @@ This table shows 10 LLMs’ performance on REPOCOD, under three retrieval settin
 However,  Compared
 to their pass@1 on HumanEval (about 90 pass@1) and MBPP, SOTA LLMs are still far
 away from writing real-world programs requiring repository-level information.
+
+## Citation
+
+```
+@misc{liang2024languagemodelsreplaceprogrammers,
+      title={Can Language Models Replace Programmers? REPOCOD Says 'Not Yet'}, 
+      author={Shanchao Liang and Yiran Hu and Nan Jiang and Lin Tan},
+      year={2024},
+      eprint={2410.21647},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2410.21647}, 
+}
+```
