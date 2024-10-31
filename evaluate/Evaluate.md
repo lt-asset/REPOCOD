@@ -8,7 +8,7 @@ Use the following command to download Docker images for the 11 repositories used
 `bash download_images.sh`
 
 ## Start Containers
-Run [`./start_all_containers.sh`](./start_all_containers.sh) to start all your containers. 
+Run [`bash ./start_all_containers.sh`](./start_all_containers.sh) to start all your containers. 
 
 We recommend adjusting the memory and CPU settings in the script to fit your system configuration before running it.
 

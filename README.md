@@ -9,8 +9,18 @@ We create REPOCOD, a code generation benchmark with 980 problems collected from 
 
 ## Usage
 
+### Install Dependencies
+
+Please use the following commands to install the necessary packages for inference and evaluation using REPOCOD.
+```
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### Inference
 Please refer to [./inference/Inference.md](./inference/Inference.md) for using REPOCOD.
 
+### Evaluation
 To evaluate on REPOCOD, please refer to [./evaluate/Evaluate.md](./evaluate/Evaluate.md).
 
 ## Data Collection

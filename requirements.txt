@@ -1,0 +1,4 @@
+tree-sitter==0.23.1
+tree-sitter-python==0.23.2
+datasets==3.0.1
+docker==7.1.0

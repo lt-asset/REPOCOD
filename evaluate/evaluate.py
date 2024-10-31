@@ -163,7 +163,7 @@ def evaluate(infer_result_path, clean_up=False, early_stop=True, n_process=8):
     eval_result_path = f"./evaluate_results/{os.path.basename(infer_result_path)}"
     result_signature = "pytest_results/" + os.path.basename(infer_result_path)[:-len(".json")]
 
-    oracle_dataset_path = f"../dataset.json"
+    oracle_dataset_path = f"../ref_dataset.json"
     if os.path.exists(oracle_dataset_path):
         with open(oracle_dataset_path, 'r') as f:
             oracle_datasets = json.load(f)
