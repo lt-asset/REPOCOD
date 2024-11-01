@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>REPOCOD</title>
+  <link rel="icon" type="image/png" href="static/images/cod.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              Can Language Models Replace Programmers?
+              <img src="static/images/cod.png" alt="Icon"
+                style="vertical-align: middle; margin: 0 0px;">
+              RepoCod Says 'Not Yet'
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/shanchaoL" target="_blank">Shanchao Liang</a><sup></sup>,</span>
+              <span class="author-block">
+                <a href="https://www.cs.purdue.edu/homes/lintan/" target="_blank">Yiran Hu</a><sup></sup>,</span>
+              <span class="author-block">
+                <a href="https://jiang719.github.io/" target="_blank">Nan Jiang</a>
+              </span>
+              <span class="author-block">
+                <a href="https://www.cs.purdue.edu/homes/lintan/" target="_blank">Lin Tan</a>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Purdue Univeristy<br>Under Submission</span>
+              <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/lt-asset/REPOCOD" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a> -->
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/lt-asset/REPOCOD" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2410.21647v1" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- leaderboard -->
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Leaderboard</h2>
+
+        <div class="columns is-multiline">
+          <!-- BM25 Table -->
+          <div class="column is-one-third">
+            <table class="table is-fullwidth is-bordered is-striped">
+              <thead>
+                <tr>
+                  <th colspan="3" class="has-text-centered">BM25</th>
+                </tr>
+                <tr>
+                  <th>Rank</th>
+                  <th>Model</th>
+                  <th>Pass@1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1 <span class="icon"><i class="fas fa-trophy" style="color: gold;"></i></span></td>
+                  <td>GPT-4o</td>
+                  <td>27.35</td>
+                </tr>
+                <tr>
+                  <td>2 <span class="icon"><i class="fas fa-trophy" style="color: silver;"></i></span></td>
+                  <td>DeepSeek-V2.5</td>
+                  <td>18.47</td>
+                </tr>
+                <tr>
+                  <td>3 <span class="icon"><i class="fas fa-trophy" style="color: #cd7f32;"></i></span></td>
+                  <td>DeepSeekCoder-33B</td>
+                  <td>16.73</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>OpenCodeInterpreter-33B</td>
+                  <td>15.31</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>GPT-4o-Mini</td>
+                  <td>15.10</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Claude 3.5 Sonnet</td>
+                  <td>14.39</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>DeepSeekCoder-6.7B</td>
+                  <td>13.98</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>CodeLlama-34B</td>
+                  <td>12.35</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>OpenCodeInterpreter-6.7B</td>
+                  <td>12.14</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>CodeLlama-7B</td>
+                  <td>10.71</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Dense Table -->
+          <div class="column is-one-third">
+            <table class="table is-fullwidth is-bordered is-striped">
+              <thead>
+                <tr>
+                  <th colspan="3" class="has-text-centered">Dense</th>
+                </tr>
+                <tr>
+                  <th>Rank</th>
+                  <th>Model</th>
+                  <th>Pass@1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1 <span class="icon"><i class="fas fa-trophy" style="color: gold;"></i></span></td>
+                  <td>GPT-4o</td>
+                  <td>27.04</td>
+                </tr>
+                <tr>
+                  <td>2 <span class="icon"><i class="fas fa-trophy" style="color: silver;"></i></span></td>
+                  <td>DeepSeek-V2.5</td>
+                  <td>20.71</td>
+                </tr>
+                <tr>
+                  <td>3 <span class="icon"><i class="fas fa-trophy" style="color: #cd7f32;"></i></span></td>
+                  <td>Claude 3.5 Sonnet</td>
+                  <td>17.45</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>DeepSeekCoder-33B</td>
+                  <td>17.14</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>OpenCodeInterpreter-33B</td>
+                  <td>16.33</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>GPT-4o-Mini</td>
+                  <td>15.00</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>DeepSeekCoder-6.7B</td>
+                  <td>14.08</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>CodeLlama-34B</td>
+                  <td>12.76</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>OpenCodeInterpreter-6.7B</td>
+                  <td>12.45</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>CodeLlama-7B</td>
+                  <td>10.41</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Current-File Table -->
+          <div class="column is-one-third">
+            <table class="table is-fullwidth is-bordered is-striped">
+              <thead>
+                <tr>
+                  <th colspan="3" class="has-text-centered">Current-File</th>
+                </tr>
+                <tr>
+                  <th>Rank</th>
+                  <th>Model</th>
+                  <th>Pass@1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1 <span class="icon"><i class="fas fa-trophy" style="color: gold;"></i></span></td>
+                  <td>DeepSeek-V2.5</td>
+                  <td>27.04</td>
+                </tr>
+                <tr>
+                  <td>2 <span class="icon"><i class="fas fa-trophy" style="color: silver;"></i></span></td>
+                  <td>GPT-4o</td>
+                  <td>26.84</td>
+                </tr>
+                <tr>
+                  <td>3 <span class="icon"><i class="fas fa-trophy" style="color: #cd7f32;"></i></span></td>
+                  <td>Claude 3.5 Sonnet</td>
+                  <td>19.80</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>GPT-4o-Mini</td>
+                  <td>18.67</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>OpenCodeInterpreter-33B</td>
+                  <td>18.27</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>DeepSeekCoder-33B</td>
+                  <td>14.90</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>OpenCodeInterpreter-6.7B</td>
+                  <td>13.16</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>DeepSeekCoder-6.7B</td>
+                  <td>10.92</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>CodeLlama-34B</td>
+                  <td>9.59</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>CodeLlama-7B</td>
+                  <td>5.71</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Notes on Experiments -->
+  <section class="section hero">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Notes on Experiments</h2>
+          <div class="content has-text-justified">
+            <p>
+              <strong>1. Retrieval Settings:</strong> We use three retrieval settings: <em>Sparse Retrieval</em>, <em>Dense Retrieval</em>, and <em>Current File</em>. Both <em>Sparse Retrieval</em> and <em>Dense Retrieval</em> operate at the function level. <em>Sparse Retrieval</em> employs BM25, while <em>Dense Retrieval</em> uses text-embedding-3-small to encode the problem description, and Cosine similairty is used as the dense-retrieval score. For <em>Current File</em> setting, we use the contents before the target function and after the tagret function as contexts.
+            </p>
+            <p>
+              <strong>2. Generation details:</strong> Each LLM generates one output per instance in REPOCOD using greedy decoding. Outputs must have correct indentation to avoid syntax errors.
+            </p>
+            <p>
+              Please checkout our <a href="https://arxiv.org/abs/2410.21647v1" target="_blank">paper</a> for more details.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Abstract -->
+  <section class="section hero">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Large language models (LLMs) have shown remarkable ability in code generation with more than 90 pass@1 in
+              solving Python coding problems in HumanEval and MBPP. Such high accuracy leads to the question: can LLMs
+              replace human programmers? Existing manual crafted, simple, or single-line code generation benchmarks
+              cannot answer this question due to their gap with real-world software development. To answer this
+              question, we propose REPOCOD, a code generation benchmark with 980 problems collected from 11 popular
+              real-world projects, with more than 58% of them requiring file-level or repository-level context
+              information. In addition, REPOCOD has the longest average canonical solution length (331.6 tokens) and the
+              highest average cyclomatic complexity (9.00) compared to existing benchmarks. In our evaluations on ten
+              LLMs, none of the models can achieve more than 30 pass@1 on REPOCOD, disclosing the necessity of building
+              stronger LLMs that can help developers in real-world software development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- overview -->
+  <section class="hero is-small is-light">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="title">Data Collection</h2>
+        <figure>
+          <img src="./static/images/overview_repocod.png" alt="Overview of REPOCOD Pipeline" height="100%">
+        </figure>
+        <p class="subtitle"></p>
+        <p class="subtitle">
+          We employ a three-stage data collection pipeline to efficiently gather target functions from popular
+          repositories: Repository Selection, Target Function Selection, and Relevant Test Case Collection. 
+          For more details, feel free to read our paper!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- overview -->
+  <section class="hero is-small">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="title">Dataset Statistics</h2>
+        <figure>
+          <img src="./static/images/dataset_stat.png" alt="REPOCOD Statistics" height="100%">
+          <figcaption class="subtitle has-text-grey-dark is-size-6">
+            REPOCOD consists of 980 instances from 11 repositories across diverse domains, including data science,
+            scientific computing, web, and software development. This table details statistics for each context
+            complexity type—repository-level, file-level, and self-contained—including #NL (tokens in target
+            descriptions), #GT (tokens in canonical solutions), Cyclo. (average cyclomatic complexity), and #Funcs.
+            (number of target functions).
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{liang2024languagemodelsreplaceprogrammers,
+        title={Can Language Models Replace Programmers? REPOCOD Says 'Not Yet'}, 
+        author={Shanchao Liang and Yiran Hu and Nan Jiang and Lin Tan},
+        year={2024},
+        eprint={2410.21647},
+        archivePrefix={arXiv},
+        primaryClass={cs.SE},
+        url={https://arxiv.org/abs/2410.21647}, 
+  }</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
