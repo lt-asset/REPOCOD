@@ -60,11 +60,11 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://github.com/shanchaoL" target="_blank">Shanchao Liang</a><sup></sup>,</span>
+                <a href="https://github.com/shanchaoL" target="_blank">Shanchao Liang</a><sup></sup>, </span>
               <span class="author-block">
-                <a href="https://www.cs.purdue.edu/homes/lintan/" target="_blank">Yiran Hu</a><sup></sup>,</span>
+                <a href="https://www.cs.purdue.edu/homes/lintan/" target="_blank">Yiran Hu</a><sup></sup>, </span>
               <span class="author-block">
-                <a href="https://jiang719.github.io/" target="_blank">Nan Jiang</a>
+                <a href="https://jiang719.github.io/" target="_blank">Nan Jiang</a>, 
               </span>
               <span class="author-block">
                 <a href="https://www.cs.purdue.edu/homes/lintan/" target="_blank">Lin Tan</a>
@@ -72,7 +72,7 @@
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">Purdue Univeristy<br>Under Submission</span>
+              <span class="author-block">Purdue University<br>Under Submission</span>
               <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
             </div>
 
@@ -112,7 +112,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2410.21647v1" target="_blank"
+                  <a href="https://arxiv.org/abs/2410.21647v2" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -142,7 +142,7 @@
             <table class="table is-fullwidth is-bordered is-striped">
               <thead>
                 <tr>
-                  <th colspan="3" class="has-text-centered">BM25</th>
+                  <th colspan="3" class="has-text-centered">Sparse-Retrieval</th>
                 </tr>
                 <tr>
                   <th>Rank</th>
@@ -210,7 +210,7 @@
             <table class="table is-fullwidth is-bordered is-striped">
               <thead>
                 <tr>
-                  <th colspan="3" class="has-text-centered">Dense</th>
+                  <th colspan="3" class="has-text-centered">Dense-Retrieval</th>
                 </tr>
                 <tr>
                   <th>Rank</th>
@@ -361,7 +361,7 @@
               <strong>2. Generation details:</strong> Each LLM generates one output per instance in REPOCOD using greedy decoding. Outputs must have correct indentation to avoid syntax errors.
             </p>
             <p>
-              Please checkout our <a href="https://arxiv.org/abs/2410.21647v1" target="_blank">paper</a> for more details.
+              Please checkout our <a href="https://arxiv.org/abs/2410.21647v2" target="_blank">paper</a> for more details.
             </p>
           </div>
         </div>
@@ -378,16 +378,10 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Large language models (LLMs) have shown remarkable ability in code generation with more than 90 pass@1 in
-              solving Python coding problems in HumanEval and MBPP. Such high accuracy leads to the question: can LLMs
-              replace human programmers? Existing manual crafted, simple, or single-line code generation benchmarks
-              cannot answer this question due to their gap with real-world software development. To answer this
-              question, we propose REPOCOD, a code generation benchmark with 980 problems collected from 11 popular
-              real-world projects, with more than 58% of them requiring file-level or repository-level context
-              information. In addition, REPOCOD has the longest average canonical solution length (331.6 tokens) and the
-              highest average cyclomatic complexity (9.00) compared to existing benchmarks. In our evaluations on ten
-              LLMs, none of the models can achieve more than 30 pass@1 on REPOCOD, disclosing the necessity of building
-              stronger LLMs that can help developers in real-world software development.
+              Large language models (LLMs) have achieved high accuracy, i.e., more than 90 pass@1, in solving Python coding problems in HumanEval and MBPP. Thus, a natural question is, whether LLMs achieve comparable code completion performance compared to human developers? Unfortunately, one cannot answer this question using existing manual crafted or simple (e.g., single-line) code generation benchmarks, since such tasks fail to represent real-world software development tasks. In addition, existing benchmarks often use poor code correctness metrics, providing misleading conclusions.
+            </p>
+            <p>
+              To address these challenges, we create REPOCOD, a code generation benchmark with 980 problems collected from 11 popular real-world projects, with more than 58% of them requiring file-level or repository-level context information. In addition, REPOCOD has the longest average canonical solution length (331.6 tokens) and the highest average cyclomatic complexity (9.00) compared to existing benchmarks. Each task in REPOCOD includes 313.5 developerwritten test cases on average for better correctness evaluation. In our evaluations of ten LLMs, none of the models achieve more than 30 pass@1 on REPOCOD, indicating the necessity of building stronger LLMs that can help developers in real-world software development.
             </p>
           </div>
         </div>
