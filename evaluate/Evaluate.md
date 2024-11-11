@@ -16,7 +16,20 @@ We recommend adjusting the memory and CPU settings in the script to fit your sys
 
 Please use `evaluate.py` to evaluate on REPOCOD.
 
-An example script to start evaluation is: `python evaluate.py path/to/infer_result --clean_up False --early_stop True --n_process 16`.
+An example script to start evaluation is: 
+```
+python evaluate.py path/to/infer_result --clean_up False --early_stop True --n_process 16
+```
+
+If you have use the example.py to generate the json file that contains the generation result, you can run 
+```
+python evaluate.py ../inference/example_seaborn0.json --clean_up False --early_stop True --n_process 16
+```
+Which will show the evaluation result on the command line and save the result to `./evaluate_results/example_seaborn0.json`
+```
+Evaluating for instances from Repo: seaborn
+    Finished evaluating instance 0, function: Continuous.label, result is False
+```
 
 We recommend setting n_process to match the number of CPUs allocated in the previous step.
 

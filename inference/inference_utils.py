@@ -109,18 +109,19 @@ def remove_function_from_repo(function_name, file_path, replace_contents = None)
         with open(file_path, 'w') as f:
             new_code_lines[start_line:end_line] = replace_contents
             f.writelines(new_code_lines)
-        return True
-    return False
+        return True, start_line
+    return False, -1
 
 def get_problem_instance(sample, local_repo_path = "../downloaded_repos/"):
     function_name = sample['function_name']
     local_file_path = os.path.join(local_repo_path, sample['repository'], sample["target_module_path"])
-    success = remove_function_from_repo(function_name=function_name, file_path=local_file_path, replace_contents=sample['prompt'])
+    success, start_line = remove_function_from_repo(function_name=function_name, file_path=local_file_path, replace_contents=sample['prompt'])
     
     if not success:
         print(f"    Failed to modify repo snapshot at {local_file_path}")
         return False
     else:
+        print(f"    Repo snapshot modified at {local_file_path}:{start_line+1}")
         return os.path.join(local_repo_path, sample['repository'])
     
 def reset_instance(sample, local_repo_path="../downloaded_repos/"):
@@ -134,7 +135,7 @@ def reset_instance(sample, local_repo_path="../downloaded_repos/"):
         
         command = f"git restore {target_module_path}"
         subprocess.run(command, shell=True, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        # print(f"Successfully restored {target_module_path} in repository {repo_name}")
+        print(f"Successfully restored {target_module_path} in repository {sample['repository']}")
         return True
     
     except subprocess.CalledProcessError as e:

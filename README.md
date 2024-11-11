@@ -11,6 +11,11 @@ We create REPOCOD, a code generation benchmark with 980 problems collected from 
 ## Usage
 
 ### Install Dependencies
+Optional choice to use a conda environment:
+```
+conda create -n repocod python=3.10 -y
+conda activate repocod
+```
 
 Please use the following commands to install the necessary packages for inference and evaluation using REPOCOD.
 ```

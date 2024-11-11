@@ -24,5 +24,5 @@ cpuset_cpus="0-16"
 # Loop through each repository name to start a container
 for repo in "${repo_names[@]}"; do
     echo "Starting container for ${repo}..."
-    ./start_container.sh "$repo" "$memory" "$cpuset_cpus"
+    bash ./start_container.sh "$repo" "$memory" "$cpuset_cpus"
 done
