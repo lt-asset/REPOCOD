@@ -112,7 +112,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2410.21647v2" target="_blank"
+                  <a href="https://arxiv.org/abs/2410.21647" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -135,9 +135,273 @@
     <div class="hero-body">
       <div class="container">
         <h2 class="title">Leaderboard</h2>
+        <!-- Tabs for switching between leaderboards -->
+        <div class="tabs leaderboard-tabs is-left is-boxed">
+          <ul>
+            <li class="is-active" data-tab="full-leaderboard-tab"><a>Full</a></li>
+            <li data-tab="limited-leaderboard-tab"><a>Lite</a></li>
+          </ul>
+        </div>
+  
+        <!-- Full Leaderboard Table -->
+        <div id="full-leaderboard-tab" class="tab-content-leaderboard">
+          <div class="columns is-multiline">
+            <table class="table is-fullwidth is-bordered is-striped">
+              <thead>
+                <tr>
+                  <th colspan="3" class="has-text-left">Full</th>
+                </tr>
+                <tr>
+                  <th style="width: 10%;">Rank</th>
+                  <th style="width: 75%;">Model</th>
+                  <th style="width: 15%;">Pass@1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1 <span class="icon"><i class="fas fa-trophy" style="color: gold;"></i></span></td>
+                  <td>RAG (Sparse-Retrieval) + GPT-4o</td>
+                  <td>27.35</td>
+                </tr>
+                <tr>
+                  <td>2 <span class="icon"><i class="fas fa-trophy" style="color: silver;"></i></span></td>
+                  <td>RAG (Current-File) + DeepSeek-V2.5</td>
+                  <td>27.04</td>
+                </tr>
+                <tr>
+                  <td>3 <span class="icon"><i class="fas fa-trophy" style="color: #cd7f32;"></i></span></td>
+                  <td>RAG (Current-File) + Codestral-22B</td>
+                  <td>20.00</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>RAG (Current-File) + Claude 3.5 Sonnet</td>
+                  <td>19.80</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>RAG (Current-File) + GPT-4o-Mini</td>
+                  <td>18.67</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>RAG (Current-File) + OpenCodeInterpreter-33B</td>
+                  <td>18.27</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>RAG (Dense-Retrieval) + DeepSeekCoder-33B</td>
+                  <td>17.14</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>RAG (Sparse-Retrieval) + DeepSeekCoder-6.7B</td>
+                  <td>14.08</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>RAG (Current-File) + OpenCodeInterpreter-6.7B</td>
+                  <td>13.16</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>RAG (Dense-Retrieval) + CodeLlama-13B</td>
+                  <td>12.76</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>RAG (Sparse-Retrieval) + CodeLlama-7B</td>
+                  <td>10.71</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+  
+        <!-- Limited Leaderboard Table -->
+        <div id="limited-leaderboard-tab" class="tab-content-leaderboard" style="display: none;">
+          <div class="columns is-multiline">
+            <table class="table is-fullwidth is-bordered is-striped">
+              <thead>
+                <tr>
+                  <th colspan="3" class="has-text-left">Lite</th>
+                </tr>
+                <tr>
+                  <th style="width: 10%;">Rank</th>
+                  <th style="width: 75%;">Model</th>
+                  <th style="width: 15%;">Pass@1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1 <span class="icon"><i class="fas fa-trophy" style="color: gold;"></i></span></td>
+                  <td>RAG (Sparse-Retrieval) + GPT-4o</td>
+                  <td>9.00</td>
+                </tr>
+                <tr>
+                  <td>2 <span class="icon"><i class="fas fa-trophy" style="color: silver;"></i></span></td>
+                  <td>RAG (Sparse-Retrieval) + GPT-4o-Mini</td>
+                  <td>8.00</td>
+                </tr>
+                <tr>
+                  <td>3 <span class="icon"><i class="fas fa-trophy" style="color: #cd7f32;"></i></span></td>
+                  <td>RAG (Dense-Retrieval) + DeepSeek-V2.5</td>
+                  <td>7.50</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>RAG (Dense-Retrieval) + OpenCodeInterpreter-33B</td>
+                  <td>6.00</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>RAG (Dense-Retrieval) + OpenCodeInterpreter-6.7B</td>
+                  <td>5.00</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>RAG (Dense-Retrieval) + Codestral-22B</td>
+                  <td>4.50</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>RAG (Sparse-Retrieval) + DeepSeekCoder-33B</td>
+                  <td>4.00</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>RAG (Dense-Retrieval) + Claude 3.5 Sonnet</td>
+                  <td>3.00</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>RAG (Sparse-Retrieval) + CodeLlama-34B</td>
+                  <td>2.50</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>RAG (Sparse-Retrieval) + DeepSeekCoder-6.7B</td>
+                  <td>2.50</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>RAG (Dense-Retrieval) + CodeLlama-7B</td>
+                  <td>1.50</td>
+                </tr>
+              </tbody>              
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- <script>
+    // JavaScript to toggle between tabs
+    document.addEventListener("DOMContentLoaded", () => {
+      const tabs = document.querySelectorAll(".tabs ul li");
+      const tabContents = document.querySelectorAll(".tab-content");
+  
+      tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+          tabs.forEach(t => t.classList.remove("is-active"));
+          tab.classList.add("is-active");
+  
+          const target = tab.getAttribute("data-tab");
+          tabContents.forEach(content => {
+            content.style.display = content.id === target ? "block" : "none";
+          });
+        });
+      });
+    });
+  </script> -->
+  <!-- <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Leaderboard</h2>
 
         <div class="columns is-multiline">
-          <!-- BM25 Table -->
+            <table class="table is-fullwidth is-bordered is-striped">
+              <thead>
+                <tr>
+                  <th colspan="3" class="has-text-left">Full</th>
+                </tr>
+                <tr>
+                  <th>Rank</th>
+                  <th>Model</th>
+                  <th>Pass@1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1 <span class="icon"><i class="fas fa-trophy" style="color: gold;"></i></span></td>
+                  <td>RAG (Sparse-Retrieval) + GPT-4o</td>
+                  <td>27.35</td>
+                </tr>
+                <tr>
+                  <td>2 <span class="icon"><i class="fas fa-trophy" style="color: silver;"></i></span></td>
+                  <td>RAG (Current-File) + DeepSeek-V2.5</td>
+                  <td>27.04</td>
+                </tr>
+                <tr>
+                  <td>3 <span class="icon"><i class="fas fa-trophy" style="color: #cd7f32;"></i></span></td>
+                  <td>RAG (Current-File) + Codestral-22B</td>
+                  <td>20.00</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>RAG (Current-File) + Claude 3.5 Sonnet</td>
+                  <td>19.80</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>RAG (Current-File) + GPT-4o-Mini</td>
+                  <td>18.67</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>RAG (Current-File) + OpenCodeInterpreter-33B</td>
+                  <td>18.27</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>RAG (Dense-Retrieval) + DeepSeekCoder-33B</td>
+                  <td>17.14</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>RAG (Sparse-Retrieval) + DeepSeekCoder-6.7B</td>
+                  <td>14.08</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>RAG (Current-File) + OpenCodeInterpreter-6.7B</td>
+                  <td>13.16</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>RAG (Dense-Retrieval) + CodeLlama-13B</td>
+                  <td>12.76</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>RAG (Sparse-Retrieval) + CodeLlama-7B</td>
+                  <td>10.71</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <!-- <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Leaderboard</h2>
+
+        <div class="columns is-multiline">
           <div class="column is-one-third">
             <table class="table is-fullwidth is-bordered is-striped">
               <thead>
@@ -205,7 +469,6 @@
             </table>
           </div>
 
-          <!-- Dense Table -->
           <div class="column is-one-third">
             <table class="table is-fullwidth is-bordered is-striped">
               <thead>
@@ -273,7 +536,6 @@
             </table>
           </div>
 
-          <!-- Current-File Table -->
           <div class="column is-one-third">
             <table class="table is-fullwidth is-bordered is-striped">
               <thead>
@@ -343,7 +605,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
 
@@ -355,13 +617,7 @@
           <h2 class="title is-3">Notes on Experiments</h2>
           <div class="content has-text-justified">
             <p>
-              <strong>1. Retrieval Settings:</strong> We use three retrieval settings: <em>Sparse Retrieval</em>, <em>Dense Retrieval</em>, and <em>Current File</em>. Both <em>Sparse Retrieval</em> and <em>Dense Retrieval</em> operate at the function level. <em>Sparse Retrieval</em> employs BM25, while <em>Dense Retrieval</em> uses text-embedding-3-small to encode the problem description, and Cosine similairty is used as the dense-retrieval score. For <em>Current File</em> setting, we use the contents before the target function and after the tagret function as contexts.
-            </p>
-            <p>
-              <strong>2. Generation details:</strong> Each LLM generates one output per instance in REPOCOD using greedy decoding. Outputs must have correct indentation to avoid syntax errors.
-            </p>
-            <p>
-              Please checkout our <a href="https://arxiv.org/abs/2410.21647v2" target="_blank">paper</a> for more details.
+              <strong>RAG ({settings})</strong>: These results are generated under three retrieval settings: <em>Sparse Retrieval</em>, <em>Dense Retrieval</em>, and <em>Current File</em>.               Please checkout our <a href="https://arxiv.org/abs/2410.21647" target="_blank">paper</a> for more details.
             </p>
           </div>
         </div>
@@ -369,6 +625,31 @@
     </div>
   </section>
 
+  <section class="hero is-light is-small">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <details style="text-align: center;">
+          <summary class="title is-centered is-size-5 is-clickable" style="display: inline-block; cursor: pointer;">
+            RAG prompt example
+            <span style="font-size: 0.8em; margin-left: 5px;">
+              ▼
+            </span>
+          </summary>
+          <div style="display: flex; justify-content: center; margin-top: 1rem;">
+            <figure style="max-width: 60%; text-align: center;">
+              <img src="./resources/prompt_example.png" alt="REPOCOD Statistics" style="width: 100%; height: auto;">
+              <figcaption class="subtitle has-text-grey-dark is-size-6">
+                Prompt example used in the experiments of our paper.
+              </figcaption>
+            </figure>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+  
+  
+  
   
   <!-- Abstract -->
   <section class="section hero">
@@ -393,7 +674,7 @@
   <section class="hero is-small is-light">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <h2 class="title">Data Collection</h2>
+        <h2 class="title">Data Collection Pipeline</h2>
         <figure>
           <img src="./static/images/overview_repocod.png" alt="Overview of REPOCOD Pipeline" height="100%">
         </figure>
@@ -408,7 +689,7 @@
   </section>
 
   <!-- overview -->
-  <section class="hero is-small">
+  <!-- <section class="hero is-small">
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h2 class="title">Dataset Statistics</h2>
@@ -424,7 +705,85 @@
         </figure>
       </div>
     </div>
+  </section> -->
+  <section class="hero is-small">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="title">Dataset Statistics</h2>
+  
+        <!-- Tabs for switching between dataset statistics -->
+        <div class="tabs statistics-tabs is-left is-boxed">
+          <ul>
+            <li class="is-active" data-tab="full-statistics-tab"><a>Full</a></li>
+            <li data-tab="lite-statistics-tab"><a>Lite</a></li>
+          </ul>
+        </div>
+  
+        <!-- Full Dataset Statistics -->
+        <div id="full-statistics-tab" class="tab-content-statistics">
+          <figure>
+            <img src="./static/images/dataset_stat.png" alt="REPOCOD Statistics" height="100%">
+            <figcaption class="subtitle has-text-grey-dark is-size-6">
+              REPOCOD (Full) consists of 980 instances from 11 repositories across diverse domains, including data science,
+              scientific computing, web, and software development. This table details statistics for each context
+              complexity type—repository-level, file-level, and self-contained—including #NL (tokens in target
+              descriptions), #GT (tokens in canonical solutions), Cyclo. (average cyclomatic complexity), and #Funcs.
+              (number of target functions).
+            </figcaption>
+          </figure>
+        </div>
+  
+        <!-- Lite Dataset Statistics -->
+        <div id="lite-statistics-tab" class="tab-content-statistics" style="display: none;">
+          <figure>
+            <img src="./static/images/lite_dataset_stat.png" alt="REPOCOD Statistics" height="100%">
+            <figcaption class="subtitle has-text-grey-dark is-size-6">
+              REPOCOD (Lite) consists of a subset of instances (200 samples) from the original 11 repositories, focusing on core examples.
+              This table details statistics for each context complexity type—repository-level, file-level, and self-contained—including 
+              #NL (tokens in target descriptions), #GT (tokens in canonical solutions), Cyclo. (average cyclomatic complexity), and 
+              #Funcs. (number of target functions).
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
   </section>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Leaderboard Tabs
+      const leaderboardTabs = document.querySelectorAll(".leaderboard-tabs ul li");
+      const leaderboardTabContents = document.querySelectorAll(".tab-content-leaderboard");
+    
+      leaderboardTabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+          leaderboardTabs.forEach(t => t.classList.remove("is-active"));
+          tab.classList.add("is-active");
+    
+          const target = tab.getAttribute("data-tab");
+          leaderboardTabContents.forEach(content => {
+            content.style.display = content.id === target ? "block" : "none";
+          });
+        });
+      });
+    
+      // Statistics Tabs
+      const statisticsTabs = document.querySelectorAll(".statistics-tabs ul li");
+      const statisticsTabContents = document.querySelectorAll(".tab-content-statistics");
+    
+      statisticsTabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+          statisticsTabs.forEach(t => t.classList.remove("is-active"));
+          tab.classList.add("is-active");
+    
+          const target = tab.getAttribute("data-tab");
+          statisticsTabContents.forEach(content => {
+            content.style.display = content.id === target ? "block" : "none";
+          });
+        });
+      });
+    });
+  </script>
 
   <!--BibTex citation -->
   <section class="section" id="BibTeX">
@@ -444,12 +803,13 @@
   <!--End BibTex citation -->
 
 
+  
+
   <footer class="footer">
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-8">
           <div class="content">
-
             <p>
               This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
                 target="_blank">Academic Project Page Template</a> which was adopted from the <a
@@ -459,7 +819,6 @@
                 href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
                 Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
-
           </div>
         </div>
       </div>
