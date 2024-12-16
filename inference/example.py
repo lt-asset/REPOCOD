@@ -4,7 +4,7 @@ import os
 import json
 
 data = load_dataset('lt-asset/REPOCOD')
-sample = data['train'][0]  # Retrieve the first sample from the training set
+sample = data['test'][0]  # Retrieve the first sample from the training set
 
 # Example structure of a dataset sample:
 # From https://huggingface.co/datasets/lt-asset/REPOCOD
