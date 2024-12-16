@@ -23,7 +23,7 @@ from inference_utils import get_problem_instance, reset_instance
 
 # Load the REPOCOD dataset, which contains information about various repository functions and test cases
 data = load_dataset('lt-asset/REPOCOD')
-sample = data['train'][0]  # Retrieve the first sample from the training set
+sample = data['test'][0]  # Retrieve the first sample from the training set
 
 # Details of a dataset sample: https://huggingface.co/datasets/lt-asset/REPOCOD
 
