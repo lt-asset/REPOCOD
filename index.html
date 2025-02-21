@@ -865,7 +865,69 @@
   <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
   <!-- End of Statcounter Code -->
-
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Existing tab functionality
+      const leaderboardTabs = document.querySelectorAll(".leaderboard-tabs ul li");
+      const leaderboardTabContents = document.querySelectorAll(".tab-content-leaderboard");
+      const statisticsTabs = document.querySelectorAll(".statistics-tabs ul li");
+      const statisticsTabContents = document.querySelectorAll(".tab-content-statistics");
+    
+      // Function to switch leaderboard tabs
+      function switchLeaderboardTab(tabId) {
+        leaderboardTabs.forEach(t => t.classList.remove("is-active"));
+        leaderboardTabContents.forEach(content => {
+          content.style.display = content.id === tabId ? "block" : "none";
+        });
+        const targetTab = document.querySelector(`[data-tab="${tabId}"]`);
+        if (targetTab) {
+          targetTab.classList.add("is-active");
+          // Scroll to the leaderboard section
+          targetTab.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    
+      // Handle hash changes
+      function handleHash() {
+        const hash = window.location.hash.slice(1);
+        if (hash === 'full') {
+          switchLeaderboardTab('full-leaderboard-tab');
+        } else if (hash === 'lite') {
+          switchLeaderboardTab('limited-leaderboard-tab');
+        }
+      }
+    
+      // Listen for hash changes
+      window.addEventListener('hashchange', handleHash);
+    
+      // Handle hash on initial page load
+      handleHash();
+    
+      // Existing click handlers
+      leaderboardTabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+          const target = tab.getAttribute("data-tab");
+          switchLeaderboardTab(target);
+          // Update URL hash without triggering scroll
+          const hash = target === 'full-leaderboard-tab' ? 'full' : 'lite';
+          history.replaceState(null, null, `#${hash}`);
+        });
+      });
+    
+      // Keep existing statistics tab handlers
+      statisticsTabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+          statisticsTabs.forEach(t => t.classList.remove("is-active"));
+          tab.classList.add("is-active");
+    
+          const target = tab.getAttribute("data-tab");
+          statisticsTabContents.forEach(content => {
+            content.style.display = content.id === target ? "block" : "none";
+          });
+        });
+      });
+    });
+    </script>
 </body>
 
 </html>
