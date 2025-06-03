@@ -74,7 +74,7 @@ away from writing real-world programs requiring repository-level information.
       author={Shanchao Liang and Yiran Hu and Nan Jiang and Lin Tan},
       year={2024},
       eprint={2410.21647},
-      booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+      booktitle = "Proceedings of the 63nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
       month = july,
       year = "2025",
       note = {To appear},
