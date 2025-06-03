@@ -1,4 +1,4 @@
-# Can Language Models Replace Programmers? REPOCOD Says ‘Not Yet’
+# Can Language Models Replace Programmers for Coding? REPOCOD Says ‘Not Yet’
 
 We create REPOCOD, a code generation benchmark with 980 problems collected from 11 popular real-world projects, with more than 58% of them requiring repository-level context information. In addition, REPOCOD has the longest average canonical solution length (331.6 tokens) and the highest average cyclomatic complexity (9.00) compared to existing benchmarks. On average, each task in REPOCOD includes 313.5 developer-written test cases for better correctness evaluation. In our evaluations on ten LLMs, none of the models achieves more than 30 pass@1 on REPOCOD, disclosing the necessity of building stronger LLMs that can help developers in real-world software development.
 
@@ -69,13 +69,15 @@ away from writing real-world programs requiring repository-level information.
 ## Citation
 
 ```
-@misc{liang2024languagemodelsreplaceprogrammers,
-      title={Can Language Models Replace Programmers? REPOCOD Says 'Not Yet'}, 
+@inproceedings{liang2024languagemodelsreplaceprogrammers,
+      title={Can Language Models Replace Programmers for Coding? REPOCOD Says 'Not Yet'}, 
       author={Shanchao Liang and Yiran Hu and Nan Jiang and Lin Tan},
       year={2024},
       eprint={2410.21647},
-      archivePrefix={arXiv},
-      primaryClass={cs.SE},
-      url={https://arxiv.org/abs/2410.21647}, 
+      booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+      month = july,
+      year = "2025",
+      note = {To appear},
+      publisher = "Association for Computational Linguistics",
 }
 ```
