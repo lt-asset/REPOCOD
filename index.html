@@ -7,7 +7,8 @@
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="A real-world, complex code generation benchmark with repository-level context.">
   <meta property="og:title" content="REPOCOD" />
-  <meta property="og:description" content="A real-world, complex code generation benchmark with repository-level context." />
+  <meta property="og:description"
+    content="A real-world, complex code generation benchmark with repository-level context." />
   <meta property="og:url" content="https://lt-asset.github.io/REPOCOD/" />
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
@@ -26,7 +27,8 @@
 
 
   <title>REPOCOD</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><text y=%2218%22 font-size=%2224%22>🐟</text></svg>">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><text y=%2218%22 font-size=%2224%22>🐟</text></svg>">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -63,7 +65,7 @@
               <span class="author-block">
                 <a href="https://www.cs.purdue.edu/homes/lintan/" target="_blank">Yiran Hu</a><sup></sup>, </span>
               <span class="author-block">
-                <a href="https://jiang719.github.io/" target="_blank">Nan Jiang</a>, 
+                <a href="https://jiang719.github.io/" target="_blank">Nan Jiang</a>,
               </span>
               <span class="author-block">
                 <a href="https://www.cs.purdue.edu/homes/lintan/" target="_blank">Lin Tan</a>
@@ -126,7 +128,7 @@
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
-                    <span>Paper [ACL2025 Main]</span>
+                    Paper&nbsp;<span style="color: red;"> [ACL2025 Main]</span>
                   </a>
                 </span>
 
@@ -152,7 +154,7 @@
             <li data-tab="limited-leaderboard-tab"><a>Lite</a></li>
           </ul>
         </div>
-  
+
         <!-- Full Leaderboard Table -->
         <div id="full-leaderboard-tab" class="tab-content-leaderboard">
           <div class="columns is-multiline">
@@ -205,7 +207,7 @@
                 </tr>
                 <tr>
                   <td>7</td>
-                  <td>Qwen2.5-Coder-7B  + RAG (Dense-Retrieval)</td>
+                  <td>Qwen2.5-Coder-7B + RAG (Dense-Retrieval)</td>
                   <td>17.14</td>
                 </tr>
                 <tr>
@@ -232,7 +234,7 @@
             </table>
           </div>
         </div>
-  
+
         <!-- Limited Leaderboard Table -->
         <div id="limited-leaderboard-tab" class="tab-content-leaderboard" style="display: none;">
           <div class="columns is-multiline">
@@ -289,7 +291,7 @@
                   <td>4.50</td>
                 </tr>
                 <tr>
-                <td>8</td>
+                  <td>8</td>
                   <td>DeepSeek-R1 + RAG (Sparse-Retrieval)</td>
                   <td>4.50</td>
                 </tr>
@@ -338,14 +340,29 @@
                   <td>QWEN-2.5-Coder-7B + RAG (Dense-Retrieval)</td>
                   <td>1.50</td>
                 </tr>
-              </tbody>              
+              </tbody>
             </table>
           </div>
         </div>
+        <div class="has-text-grey is-size-7 mt-4">
+          <p>
+            <strong>Note:</strong> All results for REPOCOD-FULL are evaluated under three retrieval settings:
+            <em>Sparse Retrieval</em>, <em>Dense Retrieval</em>, and <em>Current File</em>.
+            See <a href="https://arxiv.org/abs/2410.21647" target="_blank" style="color: #363636; font-weight: 500;">our
+              paper</a> for details.
+          </p>
+          <!-- <p class="mt-2">
+        <strong>Why REPOCOD?</strong> Compared to SWE-Bench, REPOCOD includes general code generation tasks and 2.6× more test cases per task (313.5 vs. 120.8).
+        Compared to HumanEval, MBPP, and others, REPOCOD features repository-level context, full-function generation, and the highest solution complexity
+        (331.6 tokens, 9.00 cyclomatic complexity).
+      </p> -->
+        </div>
       </div>
+
     </div>
+
   </section>
-  
+
   <!-- <script>
     // JavaScript to toggle between tabs
     document.addEventListener("DOMContentLoaded", () => {
@@ -660,7 +677,7 @@
 
 
   <!-- Notes on Experiments -->
-  <section class="section hero">
+  <!-- <section class="section hero">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -669,6 +686,40 @@
             <p>
               <strong>RAG ({settings})</strong>: These results are generated under three retrieval settings: <em>Sparse Retrieval</em>, <em>Dense Retrieval</em>, and <em>Current File</em>.               Please checkout our <a href="https://arxiv.org/abs/2410.21647" target="_blank">paper</a> for more details.
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Why REPOCOD?</h2>
+          <div class="content has-text-justified">
+            <p><strong>REPOCOD</strong> is designed to go beyond conventional benchmarks with <em>repository-level
+                tasks</em>, <em>complex function generation</em>, and <em>rigorous correctness evaluation</em>.</p>
+
+            <h4 class="title is-5">Compared to <em>SWE-Bench</em></h4>
+            <ul>
+              <li><strong>Task Type:</strong> REPOCOD focuses on general code generation; SWE-Bench resolves GitHub
+                issues via pull requests.</li>
+              <li><strong>Test Coverage:</strong> REPOCOD includes 2.6× more tests per task — 313.5 vs. SWE-Bench's
+                120.8.</li>
+            </ul>
+
+            <h4 class="title is-5">Compared to <em>HumanEval</em>, <em>MBPP</em>, <em>CoderEval</em>, <em>ClassEval</em>
+            </h4>
+            <ul>
+              <li><strong>Scale:</strong> 980 tasks from 11 real-world Python projects.</li>
+              <li><strong>Task Type:</strong> Full-function generation, not toy examples or snippets.</li>
+              <li><strong>Context:</strong> Many tasks require repository-level understanding (e.g., dependencies,
+                imports).</li>
+              <li><strong>Validation:</strong> Correctness verified via hundreds of developer-written test cases.</li>
+              <li><strong>Complexity:</strong> Longest average canonical solution (331.6 tokens) and highest cyclomatic
+                complexity (9.00) across existing repository level code generation benchmarks.</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -697,10 +748,10 @@
       </div>
     </div>
   </section>
-  
-  
-  
-  
+
+
+
+
   <!-- Abstract -->
   <section class="section hero">
     <div class="container is-max-desktop">
@@ -709,10 +760,21 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Large language models (LLMs) have achieved high accuracy, i.e., more than 90 pass@1, in solving Python coding problems in HumanEval and MBPP. Thus, a natural question is, whether LLMs achieve comparable code completion performance compared to human developers? Unfortunately, one cannot answer this question using existing manual crafted or simple (e.g., single-line) code generation benchmarks, since such tasks fail to represent real-world software development tasks. In addition, existing benchmarks often use poor code correctness metrics, providing misleading conclusions.
+              Large language models (LLMs) have achieved high accuracy, i.e., more than 90 pass@1, in solving Python
+              coding problems in HumanEval and MBPP. Thus, a natural question is, whether LLMs achieve comparable code
+              completion performance compared to human developers? Unfortunately, one cannot answer this question using
+              existing manual crafted or simple (e.g., single-line) code generation benchmarks, since such tasks fail to
+              represent real-world software development tasks. In addition, existing benchmarks often use poor code
+              correctness metrics, providing misleading conclusions.
             </p>
             <p>
-              To address these challenges, we create REPOCOD, a code generation benchmark with 980 problems collected from 11 popular real-world projects, with more than 58% of them requiring file-level or repository-level context information. In addition, REPOCOD has the longest average canonical solution length (331.6 tokens) and the highest average cyclomatic complexity (9.00) compared to existing benchmarks. Each task in REPOCOD includes 313.5 developerwritten test cases on average for better correctness evaluation. In our evaluations of ten LLMs, none of the models achieve more than 30 pass@1 on REPOCOD, indicating the necessity of building stronger LLMs that can help developers in real-world software development.
+              To address these challenges, we create REPOCOD, a code generation benchmark with 980 problems collected
+              from 11 popular real-world projects, with more than 58% of them requiring file-level or repository-level
+              context information. In addition, REPOCOD has the longest average canonical solution length (331.6 tokens)
+              and the highest average cyclomatic complexity (9.00) compared to existing benchmarks. Each task in REPOCOD
+              includes 313.5 developerwritten test cases on average for better correctness evaluation. In our
+              evaluations of ten LLMs, none of the models achieve more than 30 pass@1 on REPOCOD, indicating the
+              necessity of building stronger LLMs that can help developers in real-world software development.
             </p>
           </div>
         </div>
@@ -731,7 +793,7 @@
         <p class="subtitle"></p>
         <p class="subtitle">
           We employ a three-stage data collection pipeline to efficiently gather target functions from popular
-          repositories: Repository Selection, Target Function Selection, and Relevant Test Case Collection. 
+          repositories: Repository Selection, Target Function Selection, and Relevant Test Case Collection.
           For more details, feel free to read our paper!
         </p>
       </div>
@@ -760,7 +822,7 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h2 class="title">Dataset Statistics</h2>
-  
+
         <!-- Tabs for switching between dataset statistics -->
         <div class="tabs statistics-tabs is-left is-boxed">
           <ul>
@@ -768,13 +830,14 @@
             <li data-tab="lite-statistics-tab"><a>Lite</a></li>
           </ul>
         </div>
-  
+
         <!-- Full Dataset Statistics -->
         <div id="full-statistics-tab" class="tab-content-statistics">
           <figure>
             <img src="./static/images/dataset_stat.png" alt="REPOCOD Statistics" height="100%">
             <figcaption class="subtitle has-text-grey-dark is-size-6">
-              REPOCOD (Full) consists of 980 instances from 11 repositories across diverse domains, including data science,
+              REPOCOD (Full) consists of 980 instances from 11 repositories across diverse domains, including data
+              science,
               scientific computing, web, and software development. This table details statistics for each context
               complexity type—repository-level, file-level, and self-contained—including #NL (tokens in target
               descriptions), #GT (tokens in canonical solutions), Cyclo. (average cyclomatic complexity), and #Funcs.
@@ -782,15 +845,18 @@
             </figcaption>
           </figure>
         </div>
-  
+
         <!-- Lite Dataset Statistics -->
         <div id="lite-statistics-tab" class="tab-content-statistics" style="display: none;">
           <figure>
             <img src="./static/images/lite_dataset_stat.png" alt="REPOCOD Statistics" height="100%">
             <figcaption class="subtitle has-text-grey-dark is-size-6">
-              REPOCOD (Lite) consists of a subset of instances (200 samples) from the original 11 repositories, focusing on core examples.
-              This table details statistics for each context complexity type—repository-level, file-level, and self-contained—including 
-              #NL (tokens in target descriptions), #GT (tokens in canonical solutions), Cyclo. (average cyclomatic complexity), and 
+              REPOCOD (Lite) consists of a subset of instances (200 samples) from the original 11 repositories, focusing
+              on core examples.
+              This table details statistics for each context complexity type—repository-level, file-level, and
+              self-contained—including
+              #NL (tokens in target descriptions), #GT (tokens in canonical solutions), Cyclo. (average cyclomatic
+              complexity), and
               #Funcs. (number of target functions).
             </figcaption>
           </figure>
@@ -798,34 +864,34 @@
       </div>
     </div>
   </section>
-  
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       // Leaderboard Tabs
       const leaderboardTabs = document.querySelectorAll(".leaderboard-tabs ul li");
       const leaderboardTabContents = document.querySelectorAll(".tab-content-leaderboard");
-    
+
       leaderboardTabs.forEach(tab => {
         tab.addEventListener("click", () => {
           leaderboardTabs.forEach(t => t.classList.remove("is-active"));
           tab.classList.add("is-active");
-    
+
           const target = tab.getAttribute("data-tab");
           leaderboardTabContents.forEach(content => {
             content.style.display = content.id === target ? "block" : "none";
           });
         });
       });
-    
+
       // Statistics Tabs
       const statisticsTabs = document.querySelectorAll(".statistics-tabs ul li");
       const statisticsTabContents = document.querySelectorAll(".tab-content-statistics");
-    
+
       statisticsTabs.forEach(tab => {
         tab.addEventListener("click", () => {
           statisticsTabs.forEach(t => t.classList.remove("is-active"));
           tab.classList.add("is-active");
-    
+
           const target = tab.getAttribute("data-tab");
           statisticsTabContents.forEach(content => {
             content.style.display = content.id === target ? "block" : "none";
@@ -853,7 +919,7 @@
   <!--End BibTex citation -->
 
 
-  
+
 
   <footer class="footer">
     <div class="container">
@@ -887,7 +953,7 @@
       const leaderboardTabContents = document.querySelectorAll(".tab-content-leaderboard");
       const statisticsTabs = document.querySelectorAll(".statistics-tabs ul li");
       const statisticsTabContents = document.querySelectorAll(".tab-content-statistics");
-    
+
       // Function to switch leaderboard tabs
       function switchLeaderboardTab(tabId) {
         leaderboardTabs.forEach(t => t.classList.remove("is-active"));
@@ -901,7 +967,7 @@
           targetTab.scrollIntoView({ behavior: 'smooth' });
         }
       }
-    
+
       // Handle hash changes
       function handleHash() {
         const hash = window.location.hash.slice(1);
@@ -911,13 +977,13 @@
           switchLeaderboardTab('limited-leaderboard-tab');
         }
       }
-    
+
       // Listen for hash changes
       window.addEventListener('hashchange', handleHash);
-    
+
       // Handle hash on initial page load
       handleHash();
-    
+
       // Existing click handlers
       leaderboardTabs.forEach(tab => {
         tab.addEventListener("click", () => {
@@ -928,13 +994,13 @@
           history.replaceState(null, null, `#${hash}`);
         });
       });
-    
+
       // Keep existing statistics tab handlers
       statisticsTabs.forEach(tab => {
         tab.addEventListener("click", () => {
           statisticsTabs.forEach(t => t.classList.remove("is-active"));
           tab.classList.add("is-active");
-    
+
           const target = tab.getAttribute("data-tab");
           statisticsTabContents.forEach(content => {
             content.style.display = content.id === target ? "block" : "none";
@@ -942,7 +1008,7 @@
         });
       });
     });
-    </script>
+  </script>
 </body>
 
 </html>
