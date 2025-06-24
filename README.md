@@ -26,6 +26,7 @@ pip install -r requirements.txt
 ### Inference
 Please refer to [./inference/Inference.md](./inference/Inference.md) for using REPOCOD.
 
+Retrieval Dataset is available at [google drive](https://drive.google.com/drive/folders/1CCIMZaXbEidy4d7CeHmITna2v4d7GUl5?usp=sharing).
 ### Evaluation
 To evaluate on REPOCOD, please refer to [./evaluate/Evaluate.md](./evaluate/Evaluate.md).
 
