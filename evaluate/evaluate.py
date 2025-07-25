@@ -116,9 +116,9 @@ def evaluate_repo(repo_name, result_dict, oracle_dataset = None, eval_result_pat
             signal.alarm(timeout_duration)
 
             if repo_name == "scikit-learn":
-                test_result = run_pytest_in_docker(client, container_name, os.path.join(docker_modified_project_path, "sklearn"), infer_result_path, target_test_cases, early_stop=True, n_process='auto')
+                test_result = run_pytest_in_docker(client, container_name, os.path.join(docker_modified_project_path, "sklearn"), infer_result_path, target_test_cases, early_stop=True, n_process=n_process)
             else:
-                test_result = run_pytest_in_docker(client, container_name, docker_modified_project_path, infer_result_path, target_test_cases, early_stop=True, n_process='auto')
+                test_result = run_pytest_in_docker(client, container_name, docker_modified_project_path, infer_result_path, target_test_cases, early_stop=True, n_process=n_process)
             
             signal.alarm(0)
             copy_file_from_docker(container, f"{infer_result_path}", os.path.join(tmp_subfolder, "pytest_result.json"))

@@ -49,12 +49,11 @@ def run_pytest_in_docker(client, container_name, project_path, result_file_name,
         # Decode output and get the exit code
         output = result.output.decode('utf-8')
         exit_code = result.exit_code
-        if exit_code in [1,2,3,4]:
+        if exit_code == 0:
+            return True
+        else:
+            print(f"Pytest failed with exit code {exit_code}.")
             return False
-        elif exit_code == 5:
-            return False
-        
-        return True
     except docker.errors.NotFound:
         print(f"Error: Container '{container_name}' not found.")
         return False
