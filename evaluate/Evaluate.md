@@ -3,7 +3,7 @@ The evaluation process begins by cloning our Docker containers. Then we provide 
 
 ## Download Docker Images
 
-Use the following command to download Docker images for the 11 repositories used in REPOCOD to your local machine:
+The Docker images may be updated, so please use the latest version of our Docker images. Use the following command to download Docker images for the 11 repositories used in REPOCOD to your local machine:
 
 `bash download_images.sh`
 
