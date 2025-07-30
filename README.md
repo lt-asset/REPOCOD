@@ -3,6 +3,8 @@
 We create REPOCOD, a code generation benchmark with 980 problems collected from 11 popular real-world projects, with more than 58% of them requiring file-level or repository-level context information. In addition, REPOCOD has the longest average canonical solution length (331.6 tokens) and the highest average cyclomatic complexity (9.00) compared to existing benchmarks. Each task in REPOCOD includes 313.5 developer-written test cases on average for better correctness evaluation. In our evaluations on ten LLMs, none of the models achieves more than 30 pass@1 on REPOCOD, disclosing the necessity of building stronger LLMs that can help developers in real-world software development.
 
 ## Updates:
+05/15/2025: RepoCod is accepted to ACL 2025 main!
+
 10/30/2024: Our preprint available at: [ArXiv](https://arxiv.org/abs/2410.21647v1)
 
 10/30/2024: Our dataset is available on Huggingface: [link](https://huggingface.co/datasets/lt-asset/REPOCOD)
