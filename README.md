@@ -10,6 +10,18 @@ We create REPOCOD, a code generation benchmark with 980 problems collected from 
 10/30/2024: Our dataset is available on Huggingface: [link](https://huggingface.co/datasets/lt-asset/REPOCOD)
 
 11/01/2024: The leaderboard is available here: [leaderboard](https://lt-asset.github.io/REPOCOD/)
+
+---
+
+> ⚠️ **Important Notice**
+>
+> We have identified an issue in the data categorization and are currently working on correcting it. The updated dataset will be published on [Hugging Face]([https://huggingface.co/](https://huggingface.co/datasets/lt-asset/REPOCOD)) soon.
+>
+> Additionally, due to updates in the **Astropy** and **Datasets** libraries, some tasks in this repository may now have invalid test cases. This is because they attempted to automatically synchronize with the updated upstream data. We apologize for the inconvenience. A corrected version of the repository and updated Docker images will be released soon.
+>
+> In the meantime, other task instances within **REPOCOD** remain valid, and we encourage you to explore and experiment with them as we finalize the updates.
+
+---
 ## Usage
 
 ### Install Dependencies
