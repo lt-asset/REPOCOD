@@ -121,11 +121,15 @@ def evaluate_repo(repo_name, result_dict, oracle_dataset = None, eval_result_pat
                 test_result = run_pytest_in_docker(client, container_name, docker_modified_project_path, infer_result_path, target_test_cases, early_stop=True, n_process=n_process)
             
             signal.alarm(0)
-            copy_file_from_docker(container, f"{infer_result_path}", os.path.join(tmp_subfolder, "pytest_result.json"))
+            local_pytest_result_path = os.path.join(tmp_subfolder, "pytest_result.json")
+            copy_file_from_docker(container, f"{infer_result_path}", local_pytest_result_path)
 
-            if test_result:
-                eval_result[k]['result'] = True
-                continue
+            if os.path.exists(local_pytest_result_path):
+                with open(local_pytest_result_path, 'r') as f:
+                    pytest_result = json.load(f)
+                    if pytest_result['exitcode'] == 0:
+                        eval_result[k]['result'] = True
+            
 
         except TimeoutException:
             container.exec_run(f"cp {docker_origin_project_path}{target_module_path} {docker_modified_project_path}{target_module_path}")

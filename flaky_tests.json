@@ -1,0 +1,46 @@
+{
+  "sphinx": {
+    "1": "__init__.ObjectDescription.run",
+    "0": "__init__",
+    "6": "_make_id",
+    "10": "add_autodocumenter",
+    "12": "add_directive",
+    "14": "add_node",
+    "16": "add_role",
+    "24": "filter_members",
+    "25": "nested_parse_to_nodes",
+    "26": "note_hyperlink_target",
+    "27": "parse_content_to_nodes",
+    "32": "warning"
+  },
+  "datasets": {
+    "1": "ClassLabel.cast_storage",
+    "6": "DatasetInfo.write_to_directory",
+    "7": "DownloadManager.download",
+    "8": "DownloadManager.extract",
+    "10": "DownloadManager.iter_files",
+    "11": "Features.copy",
+    "12": "Features.encode_column",
+    "14": "Features.reorder_fields_as",
+    "27": "StreamingDownloadManager.download",
+    "28": "StreamingDownloadManager.download_and_extract",
+    "29": "StreamingDownloadManager.extract",
+    "31": "StreamingDownloadManager.iter_files",
+    "36": "_is_inside_unrequested_special_dir",
+    "37": "cached_path",
+    "38": "cast_to_python_objects",
+    "42": "get_dataset_config_info",
+    "43": "get_dataset_config_names",
+    "44": "get_dataset_default_config_name",
+    "50": "load_dataset",
+    "51": "load_dataset_builder",
+    "53": "make_file_instructions",
+    "54": "map_nested",
+    "57": "table_cast",
+    "58": "xjoin"
+  },
+  "sympy": {
+    "46": "default_sort_key",
+    "94": "sympify"
+  }
+}
