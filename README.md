@@ -13,13 +13,15 @@ We create REPOCOD, a code generation benchmark with 980 problems collected from 
 
 ---
 
-> ⚠️ **Important Notice**
->
-> We have identified an issue in the data categorization and are currently working on correcting it. The updated dataset will be published on [Hugging Face]([https://huggingface.co/](https://huggingface.co/datasets/lt-asset/REPOCOD)) soon.
->
-> Additionally, due to updates in the **Astropy** and **Datasets** libraries, some tasks in this repository may now have invalid test cases. This is because they attempted to automatically synchronize with the updated upstream data. We apologize for the inconvenience. A corrected version of the repository and updated Docker images will be released soon.
->
-> In the meantime, other task instances within **REPOCOD** remain valid, and we encourage you to explore and experiment with them as we finalize the updates.
+<details>
+<summary>Update — Aug 22, 2025</summary>
+
+The **categorization issue** in the dataset has been resolved. You can now find the corrected categorization under the `content_class` field in the [Hugging Face dataset](https://huggingface.co/datasets/lt-asset/REPOCOD).
+
+Additionally, the **Astropy** and **Datasets** library dependencies have been updated, and new **Docker images** are now available. However, we do notice certain tasks still have flaky test cases, which we have reported in [flaky_tests.json](flaky_tests.json). Please reach out to us or submit an issue if you notice other tasks other than those listed.
+
+We encourage you to check out the refreshed dataset.
+</details>
 
 ---
 ## Usage
